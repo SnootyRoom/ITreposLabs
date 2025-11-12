@@ -2,9 +2,40 @@
 
 using namespace std;
 
-int main()
+int binarySearch(int arr[], int size, int a)
 {
-    int arr[5];
+    int r, l, m;
+    r = size - 1;
+    l = 0;
+    while (l <= r)
+    {
+        m = (r + l) / 2;
+        if (arr[m] > a)
+        {
+            r = m;
+        }
+        else if (arr[m] < a)
+        {
+            l = m + 1;
+        }
+        else
+        {
+            break;
+        }
+    }
+    return m;
+}
+
+
+
+int main()
+{   
+    int sizeA, index, a;
+    int arr[5] {1, 2, 3, 4, 5};
+    sizeA = size(arr);
+    a = 3;
+    index = binarySearch(arr, sizeA, a);
+    cout << index;
     return 0;
 }
 
