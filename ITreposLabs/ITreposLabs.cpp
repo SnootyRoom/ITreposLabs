@@ -33,9 +33,12 @@ int main()
     int sizeA, index, a;
     int arr[5] {1, 2, 3, 4, 5};
     sizeA = size(arr);
-    a = 3;
+    for (int i = 0; i < sizeA; i++) cout << arr[i] << " ";
+    cout << endl;
+    cout << "Input number: ";
+    cin >> a;
     index = binarySearch(arr, sizeA, a);
-    cout << index;
+    cout <<"Index = " << index;
     return 0;
 }
 
